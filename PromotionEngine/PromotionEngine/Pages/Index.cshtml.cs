@@ -12,6 +12,9 @@ namespace PromotionEngine.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+        [BindProperty]
+        public Units units { get; set; }
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -20,6 +23,20 @@ namespace PromotionEngine.Pages
         public void OnGet()
         {
 
+        }
+
+        public IActionResult OnPost()
+        {
+            var unitA = units.UnitA;
+            var unitB = units.UnitB;
+            var unitC = units.UnitC;
+            var unitD = units.UnitD;
+
+
+
+
+
+            return null;
         }
     }
 }

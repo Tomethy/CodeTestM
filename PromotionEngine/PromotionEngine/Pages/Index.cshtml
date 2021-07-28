@@ -7,23 +7,23 @@
 <div class="text-center">
     <form method="POST">
 
-        <div >
+        <div>
             <div>
                 <p style="font-size: 2rem;">
                     Please choose your products:
                 </p>
 
                 <p style="font-size:20px;">Unit A - 50</p>
-                <input class="textBoxSize" id="txtUnitA" type="number" onfocusout="onClickOut();" />
+                <input class="textBoxSize" id="txtUnitA" type="number" asp-for="units.UnitA" onfocusout="onClickOut();" />
                 <br />
                 <p style="font-size:20px;">Unit B - 30</p>
-                <input class="textBoxSize" id="txtLastName" type="number" />
+                <input class="textBoxSize" id="txtLastName" type="number" asp-for="units.UnitB" />
                 <br />
                 <p style="font-size:20px;">Unit C - 20</p>
-                <input class="textBoxSize" id="txtNoOfGuests" type="number"  />
+                <input class="textBoxSize" id="txtNoOfGuests" type="number" asp-for="units.UnitC" />
                 <br />
                 <p style="font-size:20px;">Unit D - 15</p>
-                <input class="textBoxSize" id="txtUnitD" type="number" />
+                <input class="textBoxSize" id="txtUnitD" type="number" asp-for="units.UnitD" />
                 <br />
 
                 <p style="font-size: 2rem;">
@@ -31,18 +31,21 @@
                 </p>
                 <input class="textBoxSize" type="text" id="totalPrice" />
 
+                <input class="textBoxSize" id="butCalculate" type="submit" value="Calculate Price" />
+
+
                 @* If I get time, I will attempt to implement the stripe payment system. *@
                 @*<script src="https://checkout.stripe.com/checkout.js"
-                class="stripe-button"
-                data-key=""
-                data-amount=""
-                data-name="ACME Industries"
-                data-description="Payment"
-                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                data-locale="en"
-                data-zip-code="true"
-                data-label="Pay">
-        </script>*@
+                            class="stripe-button"
+                            data-key=""
+                            data-amount=""
+                            data-name="ACME Industries"
+                            data-description="Payment"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="en"
+                            data-zip-code="true"
+                            data-label="Pay">
+                    </script>*@
             </div>
         </div>
     </form>
